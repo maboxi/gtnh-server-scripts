@@ -16,3 +16,11 @@ Server setup:
 Running the actual server:
 - run_server.sh: Run the actual server
 
+## Procedure
+
+Install:
+1. curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/maboxi/gtnh-server-scripts/refs/heads/main/get_scripts.sh | bash
+2. scripts/install_gtnh.sh \<GTNH Server Files ZIP archive URL\>
+
+Run:
+scripts/run_container.sh \<memory for JVM\>
