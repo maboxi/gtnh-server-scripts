@@ -4,6 +4,7 @@ set -eu
 
 USAGE="Usage: $(basename "$0") <server ZIP URL>"
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+echo "Sourcing config from $SCRIPT_DIR/config.sh"
 source "$SCRIPT_DIR/config.sh"
 
 if [ $# -lt 1 ]; then
