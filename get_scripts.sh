@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-set -eu
+set -e
 
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 SCRIPTS_REPOSITORY="https://github.com/maboxi/gtnh-server-scripts.git"
+
+set -eu
 
 if [ $# -ge 1 ]; then
     SCRIPTS_DIR="$1"
