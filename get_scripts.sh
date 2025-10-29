@@ -27,4 +27,6 @@ else
     exit 1
 fi
 
+chmod +x "$SCRIPTS_DIR/"*.sh
+
 echo "Done. Scripts are available in '$SCRIPTS_DIR'."
