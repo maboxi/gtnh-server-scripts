@@ -17,7 +17,7 @@ if [ -d "$SCRIPTS_DIR" ]; then
     rm -r "$SCRIPTS_DIR"
 fi
 
-if which -q git; then
+if which git 1>/dev/null 2>/dev/null; then
     echo "Cloning scripts repository '$SCRIPTS_REPOSITORY' into '$SCRIPTS_DIR'..."
     git clone "$SCRIPTS_REPOSITORY" "$SCRIPTS_DIR"
 else
