@@ -16,6 +16,8 @@ echo -e "\
 Starting container for server:
 	RAM: $RAM
 	Image: $JAVA_CONTAINER_IMAGE
+	Host run directory: $RUN_DIR_HOST_PATH
+	Container run directory: $RUN_DIR_CONTAINER_PATH
 "
 
 docker run \
