@@ -16,7 +16,7 @@ SCRIPTS_DIR="${SCRIPTS_DIR:-"${SCRIPT_DIR}/scripts"}"
 
 if [ -d "$SCRIPTS_DIR" ]; then
     echo "Removing existing scripts directory: $SCRIPTS_DIR"
-    rm -r "$SCRIPTS_DIR"
+    rm -rf "$SCRIPTS_DIR"
 fi
 
 if which git 1>/dev/null 2>/dev/null; then
