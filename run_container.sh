@@ -3,10 +3,7 @@
 set -eu
 
 USAGE="Usage: $(basename "$0") <RAM>"
-SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source ./config.sh
-
-RUN_DIR_HOST_PATH="$SCRIPT_DIR/$RUN_DIR"
 
 if [ $# -lt 1 ]; then
 	echo -e "$USAGE"
@@ -14,8 +11,6 @@ if [ $# -lt 1 ]; then
 fi
 
 RAM="$1"
-
-cp "../run_server.sh" "$RUN_DIR_HOST_PATH"
 
 echo -e "\
 Starting container for server:
