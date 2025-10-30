@@ -3,7 +3,7 @@
 set -eu
 
 USAGE="Usage: $(basename "$0") <RAM>"
-SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 if [ $# -lt 1 ]; then
 	echo -e "$USAGE"
