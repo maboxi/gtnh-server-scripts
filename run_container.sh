@@ -3,8 +3,8 @@
 set -eu
 
 USAGE="Usage: $(basename "$0") <RAM>"
-SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-source "$SCRIPT_DIR/config.sh"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+. "$SCRIPT_DIR/config.sh"
 
 if [ $# -lt 1 ]; then
 	echo -e "$USAGE"
@@ -23,5 +23,9 @@ Starting container for server:
 
 docker run \
 	-v "$RUN_DIR_HOST_PATH":"$RUN_DIR_CONTAINER_PATH" \
+	--user "$(id -u):$(id -g)" \
+	-p 25565:25565 \
+	-p 25566:25566 \
+	-p 25567:25567 \
 	"$JAVA_CONTAINER_IMAGE" \
 	bash "${RUN_DIR_CONTAINER_PATH}/run_server.sh" $@
